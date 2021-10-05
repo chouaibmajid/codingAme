@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState} from "react"
+import {useEffect} from 'react'
 function Counter() {
 
     const [value , setValue] = React.useState(0)
