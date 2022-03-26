@@ -9,6 +9,6 @@ function calculateDiscount(prices, discount) {
   }
   const TotalFinal = total - (valeurMax * discount) / 100;
 
-  return TotalFinal;
+  return Math.floor(TotalFinal);
 }
 console.log(calculateDiscount([10, 30, 40, 50], 100));

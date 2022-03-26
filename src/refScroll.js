@@ -1,20 +1,11 @@
 import React from "react";
-import { createRef } from "react";
 
-function App() {
+function RefScroll() {
   const [search, setSearch] = React.useState("");
   const [data, setData] = React.useState([]);
   const testDivRef = React.useRef(null);
-  const [elRefs, setElRefs] = React.useState([]);
 
-  React.useEffect(() => {
-    setElRefs((elRefs) =>
-      Array(data.length)
-        .fill()
-        .map((_, i) => elRefs[i] || createRef())
-    );
-  }, [data]);
-  console.log(elRefs);
+  console.log(testDivRef);
   return (
     <>
       <form
@@ -34,21 +25,11 @@ function App() {
         <button>envoyer</button>
       </form>
       <div style={{ overflow: "scroll", height: "100px" }}>
-        {!!data.length &&
-          data.map((item, id) => (
-            <div
-            ref={elRefs[id]}
-              key={id}
-              style={{ color: "red" }}
-              onClick={() => elRefs[id].current.style.color= "green" }
-            >
-              {item}
-            </div>
-          ))}
+        {!!data.length && data.map((item, id) => <div key={id}>{item}</div>)}
         <div ref={testDivRef}></div>
       </div>
     </>
   );
 }
 
-export default App;
+export default RefScroll;

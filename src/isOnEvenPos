@@ -1,0 +1,10 @@
+
+function isOnEvenPosition(table, value) {
+  // You code goes here...
+   for(let i = 0; i < table.length; i += 2) {
+        if (table[i] === value) {
+            return true;
+        }
+    }
+    return false;
+}
