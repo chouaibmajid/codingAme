@@ -22,9 +22,13 @@ const obj2 = {
 }
 const {sab3a : sab3a2} = obj2
 console.log(sab3a2)
+// output
+// sab3as
 const obj3 = {
     name,
     tanya,
     sab3a2
 }
 console.log(id)
+// output
+// { name: ' wewe', tanya: ' wa3ar', sab3a2: 'sab3as' }
