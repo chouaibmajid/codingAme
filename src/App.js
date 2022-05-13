@@ -1,8 +1,9 @@
 import React from 'react'
+import POints3d from './POints3d'
 
 function App() {
   return (
-    <div>App</div>
+    <div><POints3d /></div>
   )
 }
 
