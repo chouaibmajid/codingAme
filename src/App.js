@@ -1,10 +1,13 @@
-import React from 'react'
-import POints3d from './POints3d'
+import React from "react";
+import HeatmapFiltre from "./HeatmapFiltre";
 
 function App() {
+  
   return (
-    <div><POints3d /></div>
-  )
+    <div>
+      <HeatmapFiltre />
+    </div>
+  );
 }
 
-export default App
+export default App;
