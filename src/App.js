@@ -1,4 +1,5 @@
 import React from "react";
+import HeatmapFiltre from "./HeatmapFiltre";
 import POints3d from "./POints3d";
 
 function App() {
@@ -6,7 +7,14 @@ function App() {
 
   return (
     <>
-      <div
+    <HeatmapFiltre />
+    </>
+  );
+}
+
+export default App;
+
+      {/* <div
         style={{ display: "flex", justifyContent: "center", marginTop: "15px" }}
       >
         <button
@@ -18,7 +26,7 @@ function App() {
             fontSize: "15px",
           }}
         >
-          show results
+          show results (Nuage de points)
         </button>
       </div>
       {showGraph && (
@@ -26,8 +34,4 @@ function App() {
           <POints3d />
         </div>
       )}
-    </>
-  );
-}
-
-export default App;
+    </> */}

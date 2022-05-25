@@ -1,13 +1,7 @@
 import React from "react";
 import Plot from "react-plotly.js";
 import data from "./data.json";
-/**
- * Create array num length with random values from 0 to mul
- */
 
-/**
- * Main application component
- */
 export const funcStart = () => {
   var newArrX = [];
   var newArrY = [];
@@ -25,10 +19,13 @@ export const funcStart = () => {
   return newTab;
 };
 function POints3d() {
+  // eslint-disable-next-line no-unused-vars
   const [x, setX] = React.useState(funcStart()["x"]);
+    // eslint-disable-next-line no-unused-vars
   const [y, setY] = React.useState(funcStart()["y"]);
+    // eslint-disable-next-line no-unused-vars
   const [z, setZ] = React.useState(funcStart()["z"]);
-  const [embeddings3D, setEmbeddings3D] = React.useState(data["embeddings3D"]);
+  // const [embeddings3D, setEmbeddings3D] = React.useState(data["embeddings3D"]);
 
   const [newArr, setNewArr] = React.useState([
     {
@@ -72,7 +69,14 @@ function POints3d() {
   }, []);
 
   console.log("newArr", newArr);
-  if (newArr.length < 4) return <h1>...loading</h1>;
+  if (newArr.length < 4)
+    return (
+      <h1
+        style={{ display: "flex", justifyContent: "center", marginTop: "15px" }}
+      >
+        ...loading
+      </h1>
+    );
   return (
     <Plot
       data={newArr}
