@@ -1,5 +1,6 @@
 import React from "react";
 import POints3d from "./POints3d";
+import data from "./data.json";
 
 function App() {
   const [showGraph, setShowGraph] = React.useState(false);
@@ -23,7 +24,7 @@ function App() {
       </div>
       {showGraph && (
         <div>
-          <POints3d />
+          <POints3d data={data}/>
         </div>
       )}
     </>

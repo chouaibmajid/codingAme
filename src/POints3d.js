@@ -1,6 +1,5 @@
 import React from "react";
 import Plot from "react-plotly.js";
-import data from "./data.json";
 /**
  * Create array num length with random values from 0 to mul
  */
@@ -8,11 +7,11 @@ import data from "./data.json";
 /**
  * Main application component
  */
-export const funcStart = () => {
+export const funcStart = (dataFunc) => {
   var newArrX = [];
   var newArrY = [];
   var newArrZ = [];
-  data["embeddings3D"].forEach((item) => {
+  dataFunc["embeddings3D"].forEach((item) => {
     newArrX.push(item[0]);
     newArrY.push(item[1]);
     newArrZ.push(item[2]);
@@ -24,17 +23,18 @@ export const funcStart = () => {
   };
   return newTab;
 };
-function POints3d() {
-  const [x, setX] = React.useState(funcStart()["x"]);
-  const [y, setY] = React.useState(funcStart()["y"]);
-  const [z, setZ] = React.useState(funcStart()["z"]);
+function POints3d({data}) {
+  
+  const [x, setX] = React.useState(funcStart(data)["x"]);
+  const [y, setY] = React.useState(funcStart(data)["y"]);
+  const [z, setZ] = React.useState(funcStart(data)["z"]);
   const [embeddings3D, setEmbeddings3D] = React.useState(data["embeddings3D"]);
 
   const [newArr, setNewArr] = React.useState([
     {
-      x: funcStart()["x"].slice(0, data["pertinent_words"].length),
-      y: funcStart()["y"].slice(0, data["pertinent_words"].length),
-      z: funcStart()["z"].slice(0, data["pertinent_words"].length),
+      x: funcStart(data)["x"].slice(0, data["pertinent_words"].length),
+      y: funcStart(data)["y"].slice(0, data["pertinent_words"].length),
+      z: funcStart(data)["z"].slice(0, data["pertinent_words"].length),
       mode: "markers",
       type: "scatter3d",
       marker: { size: 8, color: "black", opacity: 0.9 },
