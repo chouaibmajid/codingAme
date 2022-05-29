@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 function Counter() {
   const [value, setValue] = React.useState(0);
+  const [show, setShow] = React.useState(0);
   useEffect(() => {
     console.log("a");
   });
@@ -14,7 +15,10 @@ function Counter() {
   }, [value]);
   return (
     <div>
-      <p id="value">{value}</p>
+      <p id="value">{value} {show}</p>
+      <button id="increment" onClick={() => setShow(show + 1)}>
+        ++
+      </button>
       <button id="increment" onClick={() => setValue(value + 1)}>
         +
       </button>
