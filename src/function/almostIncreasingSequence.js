@@ -14,3 +14,4 @@ const almostIncreasingSequence = (sequence) => {
 };
 
 console.log(almostIncreasingSequence([2, 3, 0, 1, -1]));
+//output true

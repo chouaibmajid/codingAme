@@ -21,3 +21,4 @@ function countFrequencies(words) {
   return arr.filter((item) => item !== 0);
 }
 console.log(countFrequencies(["March", "Jan", "March", "Feb", "Dec", "Jan"]));
+//output [ 1, 1, 2, 2 ]

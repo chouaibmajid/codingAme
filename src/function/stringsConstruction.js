@@ -32,4 +32,5 @@ const stringsConstruction = (a, b) => {
   return Math.min(...resultFinal);
 };
 
-console.log(stringsConstruction("aaaab", "abccbaabc"));
+console.log(stringsConstruction("acb", "abccbaabc"));
+//output 3

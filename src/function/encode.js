@@ -21,3 +21,5 @@ function encode(str) {
     while(!!messageTab.length)
    return newArr.join("")
 }
+//console.log(encode("aaabbbcccddd"))
+//output 3a3b3c3d
