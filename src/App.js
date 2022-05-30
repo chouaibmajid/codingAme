@@ -1,13 +1,15 @@
 import React from "react";
-import POints3d from "./POints3d";
-import data from "./data.json";
+// import POints3d from "./POints3d";
+// import data from "./data.json";
+import Counter from "./function/Counter";
 
 function App() {
-  const [showGraph, setShowGraph] = React.useState(false);
+  // const [showGraph, setShowGraph] = React.useState(false);
 
   return (
     <>
-      <div
+    <Counter />
+      {/* <div
         style={{ display: "flex", justifyContent: "center", marginTop: "15px" }}
       >
         <button
@@ -26,7 +28,7 @@ function App() {
         <div>
           <POints3d data={data}/>
         </div>
-      )}
+      )} */}
     </>
   );
 }
