@@ -1,6 +1,5 @@
 import React from "react";
 import HeatmapFiltre from "./HeatmapFiltre";
-import POints3d from "./POints3d";
 
 function App() {
   // const [showGraph, setShowGraph] = React.useState(false);
@@ -33,14 +32,5 @@ export default App;
         <div>
           <POints3d data={data}/>
         </div>
-<<<<<<< HEAD
       )}
     </> */}
-=======
-      )} */}
-    </>
-  );
-}
-
-export default App;
->>>>>>> b094023666883a9eccd007029de7643afd58d293
