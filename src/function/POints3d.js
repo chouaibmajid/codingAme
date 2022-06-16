@@ -1,10 +1,5 @@
 import React from "react";
 import Plot from "react-plotly.js";
-<<<<<<< HEAD:src/POints3d.js
-import data from "./data.json";
-
-export const funcStart = () => {
-=======
 /**
  * Create array num length with random values from 0 to mul
  */
@@ -13,7 +8,6 @@ export const funcStart = () => {
  * Main application component
  */
 export const funcStart = (dataFunc) => {
->>>>>>> b094023666883a9eccd007029de7643afd58d293:src/function/POints3d.js
   var newArrX = [];
   var newArrY = [];
   var newArrZ = [];
@@ -29,22 +23,11 @@ export const funcStart = (dataFunc) => {
   };
   return newTab;
 };
-<<<<<<< HEAD:src/POints3d.js
-function POints3d() {
-  // eslint-disable-next-line no-unused-vars
-  const [x, setX] = React.useState(funcStart()["x"]);
-    // eslint-disable-next-line no-unused-vars
-  const [y, setY] = React.useState(funcStart()["y"]);
-    // eslint-disable-next-line no-unused-vars
-  const [z, setZ] = React.useState(funcStart()["z"]);
-  // const [embeddings3D, setEmbeddings3D] = React.useState(data["embeddings3D"]);
-=======
 function POints3d({data}) {
   
   const [x, setX] = React.useState(funcStart(data)["x"]);
   const [y, setY] = React.useState(funcStart(data)["y"]);
   const [z, setZ] = React.useState(funcStart(data)["z"]);
->>>>>>> b094023666883a9eccd007029de7643afd58d293:src/function/POints3d.js
 
   const [newArr, setNewArr] = React.useState([
     {

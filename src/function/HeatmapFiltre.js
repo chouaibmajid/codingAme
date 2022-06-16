@@ -63,6 +63,9 @@ function HeatmapFiltre() {
     {
       name: "Autruche__ostrich_2_ostrich__VGG16__size_50__stride_50__padding_1__color_viridis__normalized__relative__min",
     },
+    {
+      name: "Autruche__ostrich_5_ostrich__VGG16__size_50__stride_50__padding_1__color_viridis__normalized__relative__min",
+    },
   ];
 
   const generatPers = () => {

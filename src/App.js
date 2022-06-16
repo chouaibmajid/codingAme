@@ -1,19 +1,13 @@
 import React from "react";
-import HeatmapFiltre from "./HeatmapFiltre";
-
+// import HeatmapFiltre from "./function/HeatmapFiltre";
+import POints3d from "./function/POints3d";
+import data from "./function/data.json"
 function App() {
-  // const [showGraph, setShowGraph] = React.useState(false);
+  const [showGraph, setShowGraph] = React.useState(false);
 
   return (
     <>
-    <HeatmapFiltre />
-    </>
-  );
-}
-
-export default App;
-
-      {/* <div
+    <div
         style={{ display: "flex", justifyContent: "center", marginTop: "15px" }}
       >
         <button
@@ -33,4 +27,10 @@ export default App;
           <POints3d data={data}/>
         </div>
       )}
-    </> */}
+    </> 
+  );
+}
+
+export default App;
+
+      
