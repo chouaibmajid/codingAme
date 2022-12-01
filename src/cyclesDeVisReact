@@ -1,0 +1,40 @@
+Montage
+Les méthodes suivantes sont appelées dans cet ordre lorsqu’une instance d’un composant est créée puis insérée dans le DOM :
+
+constructor()
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+
+/////////////////////////////
+
+Mise à jour
+Une mise à jour est déclenchée par des changements dans les props ou l’état local. Les méthodes suivantes sont appelées dans cet ordre quand un composant se rafraîchit :
+
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+////////////////////////////////////
+
+Démontage
+La méthode suivante est appelée quand un composant est retiré du DOM :
+
+componentWillUnmount()
+///////////////////////////////////
+Gestion d’erreurs
+Ces méthodes sont appelées lorsqu’une erreur survient au sein de n’importe quel composant enfant lors de son rendu, dans une méthode de cycle de vie, ou dans son constructeur.
+
+static getDerivedStateFromError()
+componentDidCatch()
+///////////////////////////////////
+Autres API
+Chaque composant fournit par ailleurs quelques API supplémentaires :
+
+setState()
+forceUpdate()
+//////////////////////////////
+Propriétés de classes
+defaultProps
+displayName
